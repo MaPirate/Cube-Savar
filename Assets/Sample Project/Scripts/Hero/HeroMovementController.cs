@@ -36,7 +36,7 @@ public class HeroMovementController : MonoBehaviour
 
     private void SetHeroForwardMovement()//hero forward movement
     {
-        transform.Translate(Vector3.down * forwardMovementSpeed * Time.fixedDeltaTime);
+        transform.Translate(Vector3.forward * forwardMovementSpeed * Time.fixedDeltaTime);
     }
 
 

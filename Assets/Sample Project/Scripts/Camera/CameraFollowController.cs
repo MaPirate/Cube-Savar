@@ -8,7 +8,7 @@ public class CameraFollowController : MonoBehaviour
     private Vector3 offset;
 
     [SerializeField] private float lerpValue;
-    
+
 
 
     void Start()
@@ -23,7 +23,7 @@ public class CameraFollowController : MonoBehaviour
 
     private void SetCameraSmoothFollow()
     {
-        newPosition = Vector3.Lerp(transform.position, new Vector3(0f, 3, heroTransform.position.z) + offset, lerpValue * Time.deltaTime);
+        newPosition = Vector3.Lerp(transform.position, new Vector3(0f, heroTransform.position.y, heroTransform.position.z) + offset, lerpValue * Time.deltaTime);
         transform.position = newPosition;
     }
 }

@@ -1,5 +1,6 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class HeroMovementController : MonoBehaviour
 {
@@ -23,9 +24,11 @@ public class HeroMovementController : MonoBehaviour
 
     private void HandleHeroHorizontalInput()
     {
-        if (Input.GetMouseButton(0))
+        // با استفاده از سیستم ورودی جدید، چک می‌کنیم که آیا دکمه چپ ماوس فشرده شده است یا نه
+        if (Mouse.current.leftButton.isPressed)
         {
-            horizontalValue = Input.GetAxis("Mouse X");
+            // میزان جابجایی ماوس در محور افقی از فریم قبل تا الان را می‌خوانیم
+            horizontalValue = Mouse.current.delta.x.ReadValue();
         }
         else
         {

@@ -1586,7 +1586,7 @@ GameObject:
   - component: {fileID: 4852952608846711910}
   - component: {fileID: 7189518401868987520}
   m_Layer: 0
-  m_Name: Crystal-Count
+  m_Name: Point Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

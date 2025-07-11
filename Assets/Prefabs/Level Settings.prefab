@@ -331,10 +331,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6841995359622239149}
     m_Modifications:
-    - target: {fileID: 3426037648059389853, guid: 4c1e5354ea504254caeeab039bea4f5b, type: 3}
-      propertyPath: m_Name
-      value: Crystal-count
-      objectReference: {fileID: 0}
     - target: {fileID: 5927438153179454177, guid: 4c1e5354ea504254caeeab039bea4f5b, type: 3}
       propertyPath: m_Name
       value: Main Menu

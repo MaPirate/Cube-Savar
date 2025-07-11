@@ -1,22 +1,7 @@
 {
   "dependencies": {
-    "com.gameanalytics.sdk": {
-      "version": "7.10.4",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.google.external-dependency-manager": "1.2.168"
-      },
-      "url": "https://package.openupm.com"
-    },
-    "com.google.external-dependency-manager": {
-      "version": "file:../GooglePackages/com.google.external-dependency-manager-1.2.186.tgz",
-      "depth": 0,
-      "source": "local-tarball",
-      "dependencies": {}
-    },
     "com.unity.ai.navigation": {
-      "version": "2.0.8",
+      "version": "2.0.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -61,7 +46,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.rider": {
-      "version": "3.0.36",
+      "version": "3.0.31",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -69,8 +54,17 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.ide.visualstudio": {
+      "version": "2.0.22",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.test-framework": "1.1.9"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.inputsystem": {
-      "version": "1.13.1",
+      "version": "1.13.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -181,7 +175,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.timeline": {
-      "version": "1.8.8",
+      "version": "1.8.7",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -202,7 +196,7 @@
       }
     },
     "com.unity.visualscripting": {
-      "version": "1.9.8",
+      "version": "1.9.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {

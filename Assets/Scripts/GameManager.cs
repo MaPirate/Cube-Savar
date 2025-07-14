@@ -168,14 +168,13 @@ public class GameManager : MonoBehaviour
 #endif
     }
 
-    // این تابع توسط دکمه PauseButton در صفحه اصلی بازی فراخوانی می‌شود
     public void PauseGame()
     {
         pauseMenuPanel.SetActive(true);
         Time.timeScale = 0f;
     }
 
-    // این تابع توسط دکمه ResumeButton در منوی توقف فراخوانی می‌شود
+
     public void ResumeGame()
     {
         pauseMenuPanel.SetActive(false);

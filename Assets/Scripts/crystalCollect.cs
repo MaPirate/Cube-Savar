@@ -5,6 +5,7 @@ using UnityEngine.SocialPlatforms.Impl;
 public class crystalCollect : MonoBehaviour
 {
     public int score = 0;
+    public GameObject gmscript;
     public int factor;
     void Start()
     {
@@ -83,7 +84,8 @@ public class crystalCollect : MonoBehaviour
         {
             factor = 20;
         }
-        
+        GameManager moz = gmscript.GetComponent<GameManager>();
+        moz.crossfactor = factor;
         
         
 

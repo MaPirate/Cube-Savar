@@ -13,8 +13,8 @@ public class HeroStackController : MonoBehaviour
    
     public void IncreaseNewBlock(GameObject _gameObject)
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z);
-        _gameObject.transform.position = new Vector3(transform.position.x, lastBlockObject.transform.position.y - 2f, transform.position.z);
+        transform.position = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
+        _gameObject.transform.position = new Vector3(transform.position.x, lastBlockObject.transform.position.y - 1f, transform.position.z);
         _gameObject.transform.SetParent(transform);
         blockList.Add(_gameObject);
         UpdateLastBlockObject();

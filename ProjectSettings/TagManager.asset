@@ -8,6 +8,8 @@ TagManager:
   - Obstacle
   - moz
   - crystal
+  - MultiplierPlatform
+  - EndZone
   layers:
   - Default
   - TransparentFX

@@ -10,12 +10,12 @@ public class MovementController : MonoBehaviour
     [SerializeField] private float horizontalLimitValue;
 
     private float horizontalValue;
-
-
     private float newPositionX;
+    // این متغیر برای کنترل حالت پایانی است
+    private bool isInEndZone = false;
 
-
-
+    // سرعت حرکت ثابت در بخش پایانی
+    public float endZoneSpeed = 5f;
     void FixedUpdate()
     {
             // فقط اگر بازی شروع شده باشد، کدهای حرکت اجرا شوند
@@ -54,12 +54,19 @@ public class MovementController : MonoBehaviour
         newPositionX = Mathf.Clamp(newPositionX, -horizontalLimitValue, horizontalLimitValue);
         transform.position = new Vector3(newPositionX, transform.position.y, transform.position.z);
     }
-   
-    private void OnTriggerEnter(Collider other) 
+
+    private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag=="Obstacle")
+        // ۱. بررسی برخورد با مانع
+        if (other.CompareTag("Obstacle"))
         {
-          Invoke( "reset", 1f);
+            // اگر با مانع برخورد کرد، بازی را ریست کن
+            Invoke("reset", 1f);
+        }
+        // ۲. بررسی ورود به محدوده پایانی
+        else if (other.CompareTag("EndZone"))
+        {
+            isInEndZone = true; // فعال کردن حالت حرکت خودکار پایانی
         }
     }
     void reset()

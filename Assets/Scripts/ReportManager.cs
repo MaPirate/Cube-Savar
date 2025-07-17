@@ -1,23 +1,26 @@
 ﻿using UnityEngine;
-// این خط را اگر ندارید، اضافه کنید
-using TMPro;
+using TMPro; // <<< ۱. این خط برای شناسایی کامپوننت‌های TextMeshPro حیاتی است
 using GameAnalyticsSDK;
 
 public class ReportManager : MonoBehaviour
 {
+    // این دو متغیر عمومی شما هستند
     public GameObject reportPanel;
-    // این خط را تغییر دهید
-    public TMP_InputField reportInputField; // <--- تغییر اصلی اینجاست
+    public TMP_InputField reportInputField; // <<< ۲. نوع متغیر باید دقیقا به این شکل باشد
 
-    // بقیه کد بدون تغییر باقی می‌ماند
     public void OpenReportPanel()
     {
-        // ...
+        if (reportPanel != null)
+        {
+            reportPanel.SetActive(true);
+            GameAnalytics.NewDesignEvent("UI:Report:PanelOpened");
+        }
     }
 
     public void SubmitReport()
     {
-        // نحوه خواندن متن از هر دو نوع یکسان است، پس این بخش نیازی به تغییر ندارد
+        if (reportInputField == null) return;
+
         string reportText = reportInputField.text;
 
         if (string.IsNullOrEmpty(reportText))
@@ -29,6 +32,10 @@ public class ReportManager : MonoBehaviour
         GameAnalytics.NewDesignEvent("UI:Report:Submitted");
         Debug.Log($"گزارش ثبت شد: {reportText}");
         reportInputField.text = "";
-        reportPanel.SetActive(false);
+
+        if (reportPanel != null)
+        {
+            reportPanel.SetActive(false);
+        }
     }
 }

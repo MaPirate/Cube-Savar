@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5940387238367225323}
   m_Layer: 0
   m_Name: Cube (28)
-  m_TagString: MultiplierPlatform
+  m_TagString: 7x
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -869,7 +869,7 @@ GameObject:
   - component: {fileID: 1257148690613573130}
   m_Layer: 0
   m_Name: Cube (36)
-  m_TagString: MultiplierPlatform
+  m_TagString: 8x
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3472,7 +3472,7 @@ GameObject:
   - component: {fileID: 248237108324124300}
   m_Layer: 0
   m_Name: Cube (66)
-  m_TagString: MultiplierPlatform
+  m_TagString: 11x
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5464,7 +5464,7 @@ GameObject:
   - component: {fileID: 7424704470067659474}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: MultiplierPlatform
+  m_TagString: 2x
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5952,7 +5952,7 @@ GameObject:
   - component: {fileID: 5146788965050544859}
   m_Layer: 0
   m_Name: Cube (91)
-  m_TagString: MultiplierPlatform
+  m_TagString: 20x
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7280,7 +7280,7 @@ GameObject:
   - component: {fileID: 8224707534378598131}
   m_Layer: 0
   m_Name: Cube (8)
-  m_TagString: MultiplierPlatform
+  m_TagString: 4x
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10043,7 +10043,7 @@ GameObject:
   - component: {fileID: 7853919568476159176}
   m_Layer: 0
   m_Name: Cube (64)
-  m_TagString: MultiplierPlatform
+  m_TagString: 10x
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11718,7 +11718,7 @@ GameObject:
   - component: {fileID: 5466764035009600847}
   m_Layer: 0
   m_Name: Cube (78)
-  m_TagString: MultiplierPlatform
+  m_TagString: 12x
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11840,7 +11840,7 @@ GameObject:
   - component: {fileID: 3865311512803834743}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: MultiplierPlatform
+  m_TagString: 1x
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12084,7 +12084,7 @@ GameObject:
   - component: {fileID: 167522944312755070}
   m_Layer: 0
   m_Name: Cube (5)
-  m_TagString: MultiplierPlatform
+  m_TagString: 3x
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12626,7 +12626,7 @@ GameObject:
   - component: {fileID: 4612110646136569338}
   m_Layer: 0
   m_Name: Cube (45)
-  m_TagString: MultiplierPlatform
+  m_TagString: 9x
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12870,7 +12870,7 @@ GameObject:
   - component: {fileID: 1829207183317604963}
   m_Layer: 0
   m_Name: Cube (15)
-  m_TagString: MultiplierPlatform
+  m_TagString: 5x
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13114,7 +13114,7 @@ GameObject:
   - component: {fileID: 2494713139988311933}
   m_Layer: 0
   m_Name: Cube (21)
-  m_TagString: MultiplierPlatform
+  m_TagString: 6x
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

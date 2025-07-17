@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     // متغیر خصوصی برای نگهداری تعداد کریستال‌ها
     private int crystalCount;
+    public int crossfactor;
     // متغیرهای جدید برای کنترل منوها و وضعیت بازی
     [Header("Game State")]
     public GameObject startMenu;
@@ -91,10 +92,12 @@ public class GameManager : MonoBehaviour
     public void AddCrystal(int amount)
     {
         crystalCount += amount;
+        crystalCount = crossfactor * crystalCount;
         Debug.Log(amount + " crystal(s) added. Total: " + crystalCount);
 
         // ذخیره مقدار جدید در حافظه دائمی
         PlayerPrefs.SetInt("CrystalCount", crystalCount);
+
 
         // به‌روزرسانی متن UI
         UpdateCrystalUI();
@@ -180,4 +183,5 @@ public class GameManager : MonoBehaviour
         pauseMenuPanel.SetActive(false);
         Time.timeScale = 1f;
     }
+
 }

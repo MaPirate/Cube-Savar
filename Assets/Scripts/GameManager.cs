@@ -3,6 +3,7 @@ using TMPro; // برای دسترسی به کامپوننت‌های TextMeshPro
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using UnityEditor.Rendering;
 
 public class GameManager : MonoBehaviour
 {
@@ -183,5 +184,5 @@ public class GameManager : MonoBehaviour
         pauseMenuPanel.SetActive(false);
         Time.timeScale = 1f;
     }
-
+    
 }

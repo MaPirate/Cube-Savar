@@ -1,11 +1,15 @@
-﻿using Unity.Collections;
+﻿using TMPro;
+using Unity.Collections;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class crystalCollect : MonoBehaviour
 {
     public int score = 0;
     public GameObject gmscript;
+    public int mremtiaz = 0; 
+    public TextMeshProUGUI scoreText;
     public int factor;
     void Start()
     {
@@ -23,13 +27,23 @@ public class crystalCollect : MonoBehaviour
         // اگر آبجکتی که بهش برخورد کردیم تگ "Crystal" رو داشت
         if (other.CompareTag("crystal"))
         {
+            Destroy(other.gameObject);
+
             // فراخوانی متد AddCrystal از اسکریپت CrystalManager
             // به خاطر الگوی Singleton، به راحتی به instance دسترسی داریم
-            GameManager.instance.AddCrystal(1);
+            mremtiaz += 1;
+
+
+
+            Debug.Log(mremtiaz);
             // از بین بردن آبجکت کریستال بعد از برخورد
-            Destroy(other.gameObject);
+
+            GameManager.instance.AddCrystal(1);
+                scoreText.GetComponent<RTLTMPro.RTLTextMeshPro>().text = mremtiaz.ToString();
+
+            }
         }
-    }
+    
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "1x")
@@ -86,9 +100,9 @@ public class crystalCollect : MonoBehaviour
         }
         GameManager moz = gmscript.GetComponent<GameManager>();
         moz.crossfactor = factor;
-        
-        
 
-  }
+
+
+    }
   
 }

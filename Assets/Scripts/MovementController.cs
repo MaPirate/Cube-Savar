@@ -57,9 +57,21 @@ public class MovementController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // ۱. بررسی برخورد با مانع
-        if (other.CompareTag("Obstacle"))
-        {
+        if (other.tag == "Obstacle" ||
+        other.tag == "1x" ||
+        other.tag == "2x" ||
+        other.tag == "3x"||
+        other.tag == "4x"||
+        other.tag == "5x"||
+        other.tag == "6x" ||
+        other.tag == "7x" ||
+        other.tag == "8x" ||
+        other.tag == "9x" ||
+        other.tag == "10x" ||
+        other.tag == "11x" ||
+        other.tag == "12x" ||
+        other.tag == "20x" ){
+        
             // اگر با مانع برخورد کرد، بازی را ریست کن
             Invoke("reset", 1f);
         }

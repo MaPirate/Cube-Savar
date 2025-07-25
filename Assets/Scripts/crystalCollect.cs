@@ -1,16 +1,23 @@
-﻿using TMPro;
+using System.Security.Cryptography.X509Certificates;
+using TMPro;
 using Unity.Collections;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class crystalCollect : MonoBehaviour
 {
     public int score = 0;
-    public GameObject gmscript;
-    public int mremtiaz = 0; 
+    public GameObject scoredcrystal;
+    
+    
+    public int mremtiaz = 0;
     public TextMeshProUGUI scoreText;
     public int factor;
+    
     void Start()
     {
 
@@ -19,31 +26,30 @@ public class crystalCollect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
+    
 
     private void OnTriggerEnter(Collider other)
     {
-        // اگر آبجکتی که بهش برخورد کردیم تگ "Crystal" رو داشت
+
         if (other.CompareTag("crystal"))
         {
             Destroy(other.gameObject);
 
-            // فراخوانی متد AddCrystal از اسکریپت CrystalManager
-            // به خاطر الگوی Singleton، به راحتی به instance دسترسی داریم
             mremtiaz += 1;
 
 
 
             Debug.Log(mremtiaz);
-            // از بین بردن آبجکت کریستال بعد از برخورد
+
 
             GameManager.instance.AddCrystal(1);
-                scoreText.GetComponent<RTLTMPro.RTLTextMeshPro>().text = mremtiaz.ToString();
+            scoreText.GetComponent<RTLTMPro.RTLTextMeshPro>().text = mremtiaz.ToString();
 
-            }
         }
-    
+    }
+
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "1x")
@@ -98,11 +104,18 @@ public class crystalCollect : MonoBehaviour
         {
             factor = 20;
         }
-        GameManager moz = gmscript.GetComponent<GameManager>();
-        moz.crossfactor = factor;
 
 
 
     }
+    
+    
+    void Setscore()
+    {
+        scoredcrystal.GetComponent<ScoreManager>().totalscore = mremtiaz*factor;
+
+
+     }
+    
   
 }

@@ -18,7 +18,7 @@ public class MovementController : MonoBehaviour
     public float endZoneSpeed = 5f;
     void FixedUpdate()
     {
-            // فقط اگر بازی شروع شده باشد، کدهای حرکت اجرا شوند
+        // فقط اگر بازی شروع شده باشد، کدهای حرکت اجرا شوند
         if (GameManager.isGameStarted)
         {
             HandleHeroHorizontalInput();
@@ -57,21 +57,9 @@ public class MovementController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Obstacle" ||
-        other.tag == "1x" ||
-        other.tag == "2x" ||
-        other.tag == "3x"||
-        other.tag == "4x"||
-        other.tag == "5x"||
-        other.tag == "6x" ||
-        other.tag == "7x" ||
-        other.tag == "8x" ||
-        other.tag == "9x" ||
-        other.tag == "10x" ||
-        other.tag == "11x" ||
-        other.tag == "12x" ||
-        other.tag == "20x" ){
-        
+        if (other.tag == "Obstacle")
+        {
+
             // اگر با مانع برخورد کرد، بازی را ریست کن
             Invoke("reset", 1f);
         }
@@ -83,7 +71,8 @@ public class MovementController : MonoBehaviour
     }
     void reset()
     {
-       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-   
+  
+
 }

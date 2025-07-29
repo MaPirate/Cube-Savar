@@ -3,6 +3,7 @@ using TMPro;
 using Unity.Collections;
 using Unity.VisualScripting;
 using UnityEditor;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SocialPlatforms.Impl;
@@ -17,7 +18,7 @@ public class crystalCollect : MonoBehaviour
     public int mremtiaz = 0;
     public TextMeshProUGUI scoreText;
     public int factor;
-    
+    public MultiplierPlatform tempp;
     void Start()
     {
 
@@ -49,65 +50,90 @@ public class crystalCollect : MonoBehaviour
 
         }
     }
-
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.tag == "1x")
+        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.name == "plat")
         {
+            Debug.Log("hi2");
             factor = 1;
-        }
-        if (other.gameObject.tag == "2x")
-        {
-            factor = 2;
-        }
-        if (other.gameObject.tag == "3x")
-        {
-            factor = 3;
-        }
-        if (other.gameObject.tag == "4x")
-        {
-            factor = 4;
-        }
-        if (other.gameObject.tag == "5x")
-        {
-            factor = 5;
-        }
-        if (other.gameObject.tag == "6x")
-        {
-            factor = 6;
-        }
-        if (other.gameObject.tag == "7x")
-        {
-            factor = 7;
-        }
-        if (other.gameObject.tag == "8x")
-        {
-            factor = 8;
-        }
-        if (other.gameObject.tag == "9x")
-        {
-            factor = 9;
-        }
-        if (other.gameObject.tag == "10x")
-        {
-            factor = 10;
-        }
-        if (other.gameObject.tag == "11x")
-        {
-            factor = 11;
-        }
-        if (other.gameObject.tag == "12x")
-        {
-            factor = 12;
-        }
-        if (other.gameObject.tag == "20x")
-        {
-            factor = 20;
-        }
 
+        }
+        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 2)
+        // {
+        //     factor = 2;
 
+        // }
 
-    }
+        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 3)
+        // {
+        //     factor = 3;
+
+        // }
+
+        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 4)
+        // {
+        //     factor = 4;
+
+        // }
+
+        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 5)
+        // {
+        //     factor = 5;
+
+        // }
+
+        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 6)
+        // {
+        //     factor = 6;
+
+        // }
+
+        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 7)
+        // {
+        //     factor = 7;
+
+        // }
+
+        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 8)
+        // {
+        //     factor = 8;
+
+        // }
+
+        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 9)
+        // {
+        //     factor = 9;
+
+        // }
+
+        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 10)
+        // {
+        //     factor = 10;
+
+        // }
+
+        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 11)
+        // {
+        //     factor = 11;
+        //     Debug.Log("11");
+
+        // }
+
+        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 12)
+        // {
+        //     factor = 12;
+        //     Debug.Log("12");
+
+        // }
+        
+        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 20)
+        // {
+        //     factor = 20;    
+
+        // }
+  }
+    
     
     
     void Setscore()

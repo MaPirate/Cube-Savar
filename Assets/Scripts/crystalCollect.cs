@@ -27,7 +27,7 @@ public class crystalCollect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Setscore();
     }
     
 
@@ -42,7 +42,7 @@ public class crystalCollect : MonoBehaviour
 
 
 
-            Debug.Log(mremtiaz);
+            
 
 
             GameManager.instance.AddCrystal(1);
@@ -52,86 +52,101 @@ public class crystalCollect : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.name);
-        if (collision.gameObject.name == "plat")
+        if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 1)
         {
-            Debug.Log("hi2");
             factor = 1;
+            
 
         }
-        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 2)
-        // {
-        //     factor = 2;
 
-        // }
+        if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 2)
+        {
+            factor = 2;
+            
 
-        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 3)
-        // {
-        //     factor = 3;
+        }
 
-        // }
+        if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 3)
+        {
+            factor = 3;
+            
 
-        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 4)
-        // {
-        //     factor = 4;
+        }
 
-        // }
+        if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 4)
+        {
+            factor = 4;
+            
 
-        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 5)
-        // {
-        //     factor = 5;
+        }
 
-        // }
+        if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 5)
+        {
+            factor = 5;
+            
 
-        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 6)
-        // {
-        //     factor = 6;
+        }
 
-        // }
+        if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 6)
+        {
+            factor = 6;
+            
 
-        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 7)
-        // {
-        //     factor = 7;
 
-        // }
+        }
 
-        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 8)
-        // {
-        //     factor = 8;
+        if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 7)
+        {
+            factor = 7;
+            
+        }
 
-        // }
+        if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 8)
+        {
+            factor = 8;
+            
 
-        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 9)
-        // {
-        //     factor = 9;
+        }
 
-        // }
+        if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 9)
+        {
+            factor = 9;
+            
 
-        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 10)
-        // {
-        //     factor = 10;
+        }
 
-        // }
+        if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 10)
+        {
+            factor = 10;
+            
 
-        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 11)
-        // {
-        //     factor = 11;
-        //     Debug.Log("11");
+        }
 
-        // }
+        if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 11)
+        {
+            factor = 11;
+            
 
-        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 12)
-        // {
-        //     factor = 12;
-        //     Debug.Log("12");
 
-        // }
+        }
+
+        if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 12)
+        {
+            factor = 12;
+            
+
+
+        }
+
+        if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 20)
+        {
+            factor = 20;
+            
+            
+
+
+        }
         
-        // if (collision.gameObject.GetComponent<MultiplierPlatform>().multiplierValue == 20)
-        // {
-        //     factor = 20;    
-
-        // }
   }
     
     

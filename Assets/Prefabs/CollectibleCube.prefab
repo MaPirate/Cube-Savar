@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 3821442188414106771}
   - component: {fileID: 1075445208267112288}
   - component: {fileID: 426706968446317149}
-  - component: {fileID: 5999452888020826513}
   - component: {fileID: 5989070782958422173}
   - component: {fileID: 6539146989885299029}
   - component: {fileID: 2026711074947214706}
   - component: {fileID: 4043731024663722210}
+  - component: {fileID: 2240503613486038502}
   m_Layer: 0
   m_Name: CollectibleCube
   m_TagString: cube
@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2224289592520039556}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 51, y: 51, z: 51}
   m_ConstrainProportionsScale: 1
@@ -91,19 +91,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5999452888020826513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2224289592520039556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 044c58de5dd62764c99fd747d73215b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
 --- !u!65 &5989070782958422173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -186,3 +173,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroStackController: {fileID: 0}
+--- !u!114 &2240503613486038502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2224289592520039556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 044c58de5dd62764c99fd747d73215b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  scoredcrystal: {fileID: 0}
+  heroStackController: {fileID: 0}
+  mremtiaz: 0
+  scoreText: {fileID: 0}
+  factor: 0
+  tempp: {fileID: 0}

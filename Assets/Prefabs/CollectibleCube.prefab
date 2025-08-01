@@ -187,8 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   scoredcrystal: {fileID: 0}
-  heroStackController: {fileID: 0}
   mremtiaz: 0
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 4820193882179810931, guid: 8dbf14570ad127645acfb01048ffc9d9, type: 3}
   factor: 0
   tempp: {fileID: 0}

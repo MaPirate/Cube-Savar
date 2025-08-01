@@ -11,14 +11,14 @@ using UnityEngine.UI;
 
 public class crystalCollect : MonoBehaviour
 {
-    public int score = 0;
-    public GameObject scoredcrystal;
+    private int score = 0;
+    private GameObject scoredcrystal;
     
     
-    public int mremtiaz = 0;
+    private int mremtiaz = 0;
     public TextMeshProUGUI scoreText;
-    public int factor;
-    public MultiplierPlatform tempp;
+    private int factor;
+    private MultiplierPlatform tempp;
     void Start()
     {
 

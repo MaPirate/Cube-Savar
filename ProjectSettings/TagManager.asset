@@ -23,6 +23,7 @@ TagManager:
   - 11x
   - 12x
   - 20x
+  - rotate
   layers:
   - Default
   - TransparentFX

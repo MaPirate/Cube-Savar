@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public GameObject startMenu;
     public GameObject inGameMenu;
     public GameObject winPanel;
+    public GameObject failMenuPanel;
 
     public static bool isGameStarted; // برای اینکه از اسکریپت بازیکن بهش دسترسی داشته باشیم
     [Header("Crystal Show")]
@@ -64,6 +65,8 @@ public class GameManager : MonoBehaviour
         startMenu.SetActive(true);
         inGameMenu.SetActive(false);
         winPanel.SetActive(false);
+        failMenuPanel.SetActive(false);
+
     }
 
     void Update()
@@ -88,6 +91,16 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Started!");
     }
 
+    public void ShowFailMenu()
+    {
+        failMenuPanel.SetActive(true);
+
+        Time.timeScale = 0f;
+    }
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 
     // متدی برای اضافه کردن کریستال
     public void AddCrystal(int amount)
@@ -125,11 +138,6 @@ public class GameManager : MonoBehaviour
     }
 
     // تابع جدید برای ریستارت کردن بازی
-    public void RestartGame()
-    {
-        // صحنه فعلی را از اول بارگذاری می‌کند
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
 
     public void PlayerWon()
     {

@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 public class MovementController : MonoBehaviour
 {
+    public GameManager uiManager;
 
     [SerializeField] private float forwardMovementSpeed;
     [SerializeField] private float horizontalMovementSpeed;
@@ -11,10 +12,8 @@ public class MovementController : MonoBehaviour
 
     private float horizontalValue;
     private float newPositionX;
-    // این متغیر برای کنترل حالت پایانی است
     private bool isInEndZone = false;
 
-    // سرعت حرکت ثابت در بخش پایانی
     public float endZoneSpeed = 5f;
     void FixedUpdate()
     {
@@ -59,14 +58,11 @@ public class MovementController : MonoBehaviour
     {
         if (other.tag == "Obstacle")
         {
-
-            // اگر با مانع برخورد کرد، بازی را ریست کن
-            Invoke("reset", 1f);
+            uiManager.ShowFailMenu(); 
         }
-        // ۲. بررسی ورود به محدوده پایانی
         else if (other.CompareTag("EndZone"))
         {
-            isInEndZone = true; // فعال کردن حالت حرکت خودکار پایانی
+            isInEndZone = true;
         }
     }
     void reset()

@@ -27,7 +27,7 @@ public class crystalCollect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Setscore();
+        //Setscore();
     }
     
 
@@ -148,15 +148,13 @@ public class crystalCollect : MonoBehaviour
         }
         
   }
-    
-    
-    
-    void Setscore()
-    {
-        scoredcrystal.GetComponent<ScoreManager>().totalscore = mremtiaz*factor;
 
 
-     }
-    
-  
+
+    //void Setscore()
+    //{
+    //    scoredcrystal.GetComponent<ScoreManager>().totalscore = mremtiaz * factor;
+    //}
+
+
 }

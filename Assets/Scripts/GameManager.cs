@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     // متغیرهای جدید برای کنترل منوها و وضعیت بازی
     [Header("Game State")]
     public GameObject startMenu;
+    public realcc realcc;
     public GameObject inGameMenu;
     public GameObject winPanel;
     public GameObject failMenuPanel;
@@ -94,6 +95,7 @@ public class GameManager : MonoBehaviour
     public void ShowFailMenu()
     {
         failMenuPanel.SetActive(true);
+        realcc.AddLevelScore();
 
         Time.timeScale = 0f;
     }

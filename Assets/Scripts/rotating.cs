@@ -21,7 +21,7 @@ public class rotating : MonoBehaviour
     
     if (other.gameObject.tag == "rotate")
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 0.14f );
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 0.3f );
         }
   }
   

@@ -27,7 +27,7 @@ public class CubeController : MonoBehaviour
             }
            
         } 
-        if(other.gameObject.tag=="Obstacle")
+        if(other.gameObject.tag=="Obstacle" ||  other.gameObject.tag=="endsag")
         {
           heroStackController.DecreaseBlock(gameObject);
         }

@@ -95,7 +95,7 @@ public class GameManager : MonoBehaviour
     public void ShowFailMenu()
     {
         failMenuPanel.SetActive(true);
-        realcc.AddLevelScore();
+        // realcc.AddLevelScore();
 
         Time.timeScale = 0f;
     }

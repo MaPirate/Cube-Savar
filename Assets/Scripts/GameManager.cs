@@ -158,15 +158,16 @@ public class GameManager : MonoBehaviour
 
      
         int facc = endfac.sag;
-        int fainal = facc * gayc;
+        int fainal = facc * gainedcrystal;
         
         isGameStarted = false; // حرکت بازیکن را متوقف می‌کند
         winPanel.SetActive(true); // پنل برنده شدن را نمایش می‌دهد
         inGameMenu.SetActive(false); // منوی داخل بازی را مخفی می‌کند
         Debug.Log(fainal);
-        Debug.Log(gayc);
+        Debug.Log(gainedcrystal);
         Debug.Log(facc);
 
+        winPanelCrystalText.text = fainal.ToString();
 
     }
 

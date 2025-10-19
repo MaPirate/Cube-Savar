@@ -12,7 +12,7 @@ public class scorefmanager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public int gainedcrystal = 0;
-    public int tg;
+    public int tg = 1;
     public GameManager gameManager;
     public int tscoref;
     public int factory;

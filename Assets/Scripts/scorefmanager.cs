@@ -10,8 +10,12 @@ using UnityEngine.VFX;
 
 public class scorefmanager : MonoBehaviour
 {
-  // Start is called once before the first execution of Update after the MonoBehaviour is created
-  public int gainedcrystal = 0;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public int gainedcrystal = 0;
+    public int tg;
+    public GameManager gameManager;
+    public int tscoref;
+    public int factory;
   public TextMeshProUGUI ingamefscore;
     void Start()
     {
@@ -22,7 +26,7 @@ public class scorefmanager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        tg = gainedcrystal;
     }
 
 
@@ -45,4 +49,16 @@ public class scorefmanager : MonoBehaviour
             ingamefscore.text = gainedcrystal.ToString();
         }
     }
-}
+
+  
+
+      
+
+    }
+    // public void AddLevelScore()
+    // {
+    //     tscoref += gainedcrystal + factory;
+    //     PlayerPrefs.SetInt("TotalScore", tscoref); 
+    //     PlayerPrefs.Save(); 
+    //     Debug.Log("Total Score: " + tscoref);
+    // }

@@ -7,6 +7,9 @@ using UnityEditor.Rendering;
 
 public class GameManager : MonoBehaviour
 {
+    int gayc = 1;
+    public endfac endfac;
+    public scorefmanager scorefmanager;
 
     public GameObject pauseMenuPanel;
     // ساخت یک نمونه استاتیک از این کلاس (الگوی Singleton)
@@ -79,6 +82,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+           
+           gayc = scorefmanager.tg;
         // --- کد جدید ---
         // اگر بازی هنوز شروع نشده و کاربر صفحه را لمس/کلیک کرد
         if (!isGameStarted && Mouse.current.leftButton.wasPressedThisFrame && !EventSystem.current.IsPointerOverGameObject())
@@ -150,9 +155,19 @@ public class GameManager : MonoBehaviour
 
     public void PlayerWon()
     {
+
+     
+        int facc = endfac.sag;
+        int fainal = facc * gayc;
+        
         isGameStarted = false; // حرکت بازیکن را متوقف می‌کند
         winPanel.SetActive(true); // پنل برنده شدن را نمایش می‌دهد
         inGameMenu.SetActive(false); // منوی داخل بازی را مخفی می‌کند
+        Debug.Log(fainal);
+        Debug.Log(gayc);
+        Debug.Log(facc);
+
+
     }
 
     // تابعی که برای رفتن به مرحله بعد استفاده می‌شود

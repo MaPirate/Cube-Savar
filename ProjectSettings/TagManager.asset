@@ -25,6 +25,7 @@ TagManager:
   - 20x
   - rotate
   - endsag
+  - em
   layers:
   - Default
   - TransparentFX

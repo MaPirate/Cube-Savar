@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
@@ -29,14 +29,16 @@ public class realcc : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "cube")
+        // اینجا چک می‌کنیم که آیا آبجکتی که با ما برخورد کرده، تگ "cube" را دارد یا نه
+        // نکته: معمولاً برای بازیکن از تگ "Player" استفاده می‌شود، اما اگر برای شما "cube" کار می‌کند، همان را بگذارید.
+        if (other.CompareTag("cube"))
         {
-            scorefmanager.addone();
+            // ۱. به جای ارجاع مستقیم، از طریق Singleton به گیم منیجر دسترسی پیدا می‌کنیم
+            // این خط به صورت خودکار GameManager فعال در صحنه را پیدا کرده و تابعش را صدا می‌زند
+            GameManager.instance.AddOneCrystal();
+
+            // ۲. بعد از اضافه شدن امتیاز، این آبجکت (کریستال) از بین می‌رود
             Destroy(gameObject);
-
-
-
-
         }
     }
 }

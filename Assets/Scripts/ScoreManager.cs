@@ -16,4 +16,6 @@ public class ScoreManager : MonoBehaviour
     {
         // Debug.Log(totalscore);
     }
+
+
 }

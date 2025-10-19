@@ -7,6 +7,7 @@ using UnityEditor.Rendering;
 
 public class GameManager : MonoBehaviour
 {
+
     public GameObject pauseMenuPanel;
     // ساخت یک نمونه استاتیک از این کلاس (الگوی Singleton)
     // این کار باعث میشه از هر جای بازی به این اسکریپت دسترسی داشته باشیم
@@ -27,6 +28,9 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI winPanelCrystalText; // متن در پنل برنده شدن
     public TextMeshProUGUI startMenuCrystalText;  // متن در منوی اصلی
     public TextMeshProUGUI inGameMenuCrystalText;
+
+    public int gainedcrystal = 0;
+    public TextMeshProUGUI ingamefscore;    
 
     // این متد قبل از Start فراخوانی میشه
     void Awake()
@@ -67,6 +71,9 @@ public class GameManager : MonoBehaviour
         inGameMenu.SetActive(false);
         winPanel.SetActive(false);
         failMenuPanel.SetActive(false);
+
+        gainedcrystal = 0;
+        UpdateCrystalText();
 
     }
 
@@ -194,5 +201,18 @@ public class GameManager : MonoBehaviour
         pauseMenuPanel.SetActive(false);
         Time.timeScale = 1f;
     }
-    
+    public void AddOneCrystal()
+    {
+        gainedcrystal += 1;
+        UpdateCrystalText();
+        Debug.Log("Crystal collected! Total: " + gainedcrystal); // لاگ برای تست
+    }
+
+    void UpdateCrystalText()
+    {
+        if (ingamefscore != null)
+        {
+            ingamefscore.text = gainedcrystal.ToString();
+        }
+    }
 }
